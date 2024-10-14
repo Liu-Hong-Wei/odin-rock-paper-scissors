@@ -5,18 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
-    <!-- <script type="module" src="./script.js" defer></script> -->
+    <script type="module" src="./script.js" defer></script>
   </head>
   <body>
-    <div id="body-container">
+    <div id="menu-container">
       <div id="game-title">ROCK PAPER SCISSORS</div>
+      <div id="points-container">
+        <div class="human-score"></div>
+        <div class="computer-score"></div>
+      </div>
       <div id="choice-section">
         <ul id="choice-container">
-          <li><button class="rock">Rock</button></li>
-          <li><button class="paper">Paper</button></li>
-          <li><button class="scissors">Scissors</button></li>
+          <li><button class="rock">ROCK</button></li>
+          <li><button class="paper">PAPER</button></li>
+          <li><button class="scissors">SCISSORS</button></li>
         </ul>
+        <button class="reset">RESET</button>
       </div>
+    </div>
+    <div id="game-section">
+      <ul id="game-progress"></ul>
     </div>
   </body>
 </html>
