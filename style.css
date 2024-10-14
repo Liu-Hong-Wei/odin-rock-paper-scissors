@@ -1,0 +1,22 @@
+#body-container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#game-title {
+  /* text-align: center; */
+  font-size: 50px;
+}
+
+ul {
+  list-style: none;
+}
+
+#choice-container {
+  width: 300px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
