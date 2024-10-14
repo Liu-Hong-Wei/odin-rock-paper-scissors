@@ -39,40 +39,25 @@ function getHumanChoice() {
 }
 
 function playRound(humanChoice, computerChoice) {
-  let result = 0;
   if (humanChoice == computerChoice) {
-    result = 0;
+    console.log("tie!");
   } else {
     if (
       (humanChoice === "rock" && computerChoice === "scissors") ||
       (humanChoice === "paper" && computerChoice === "rock") ||
       (humanChoice === "scissors" && computerChoice === "paper")
     ) {
-      result = 1;
+      console.log("Human Win!");
+      humanScore++;
     } else {
-      result = 2;
+      console.log("Computer Win!");
+      computerScore++;
     }
   }
-  if (result == 0) {
-    console.log("tie!");
-    console.log(
-      `Now human score is still ${humanScore} VS computer score ${computerScore}`
-    );
-  } else if (result == 1) {
-    console.log("Human Win!");
-    humanScore++;
-    console.log(
-      `Now human score is ${humanScore} VS computer score ${computerScore}`
-    );
-  } else if (result == 2) {
-    console.log("Computer Win!");
-    computerScore++;
-    console.log(
-      `Now human score is ${humanScore} VS computer score ${computerScore}`
-    );
-  } else {
-    console.error("Something Went Wrong!");
-  }
+
+  console.log(
+    `Now human score is ${humanScore} VS computer score ${computerScore}`
+  );
   return;
 }
 
