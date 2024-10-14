@@ -43,50 +43,33 @@ function playRound(humanChoice, computerChoice) {
   if (humanChoice == computerChoice) {
     result = 0;
   } else {
-    switch (humanChoice) {
-      case "rock":
-        switch (computerChoice) {
-          case "scissors":
-            result = 1;
-            break;
-          case "paper":
-            result = 2;
-            break;
-        }
-        break;
-      case "paper":
-        switch (computerChoice) {
-          case "scissors":
-            result = 2;
-            break;
-          case "rock":
-            result = 1;
-            break;
-        }
-        break;
-      case "scissors":
-        switch (computerChoice) {
-          case "rock":
-            result = 2;
-            break;
-          case "paper":
-            result = 1;
-            break;
-        }
-        break;
+    if (
+      (humanChoice === "rock" && computerChoice === "scissors") ||
+      (humanChoice === "paper" && computerChoice === "rock") ||
+      (humanChoice === "scissors" && computerChoice === "paper")
+    ) {
+      result = 1;
+    } else {
+      result = 2;
     }
   }
   if (result == 0) {
     console.log("tie!");
-    console.log(`Now human score is still ${humanScore} VS computer score ${computerScore}`);
+    console.log(
+      `Now human score is still ${humanScore} VS computer score ${computerScore}`
+    );
   } else if (result == 1) {
     console.log("Human Win!");
     humanScore++;
-    console.log(`Now human score is ${humanScore} VS computer score ${computerScore}`);
+    console.log(
+      `Now human score is ${humanScore} VS computer score ${computerScore}`
+    );
   } else if (result == 2) {
     console.log("Computer Win!");
     computerScore++;
-    console.log(`Now human score is ${humanScore} VS computer score ${computerScore}`);
+    console.log(
+      `Now human score is ${humanScore} VS computer score ${computerScore}`
+    );
   } else {
     console.error("Something Went Wrong!");
   }
@@ -102,9 +85,9 @@ for (let i = 0; i < 5; i++) {
 }
 
 if (humanScore > computerScore) {
-    alert("Finally human win!");
+  alert("Finally human win!");
 } else if (humanScore < computerScore) {
-    alert("Finally computer win!");
+  alert("Finally computer win!");
 } else {
-    alert("Tie!");
+  alert("Tie!");
 }
